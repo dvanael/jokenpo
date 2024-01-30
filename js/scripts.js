@@ -10,11 +10,18 @@ const R = "assets/rock.png",
 
 const draw = "Empate", win = "Você Ganhou!", lose = "Você Perdeu!";
 
-function play(user){
-    userImg.src = botImg.src = "assets/rock.png";
-    result.textContent = "Aguarde...";
-    
+let isProcessing = false;
+
+function play(user, option){
+    if (isProcessing) return;
+    isProcessing = true;
+
     gameContainer.classList.add("start");
+    userImg.src = botImg.src = R;
+    result.textContent = "Aguarde";
+    result.classList.add("loading");
+    option.classList.add("selected");
+
     let time = setTimeout(() => {
       gameContainer.classList.remove("start");
       
@@ -22,18 +29,22 @@ function play(user){
       let randomNum = Math.floor(Math.random()*q.length);
       let bot = q[randomNum]; 
       
-      userImg.setAttribute('src', user);
-      botImg.setAttribute('src', bot);
+      userImg.src = user;
+      botImg.src = bot;
       
-      if (user === bot) return result.textContent = draw;
+      if (user === bot) result.textContent = draw;
       else if (
-          (user === R && bot === S) ||
-          (user === P && bot === R) ||
-          (user === S && bot === P)
-      ) {
-        return result.textContent = win;
-      } else {
-        return result.textContent = lose;
-      }
+        (user === R && bot === S) ||
+        (user === P && bot === R) ||
+        (user === S && bot === P)
+        ) {
+          result.textContent = win;
+        } else {
+          result.textContent = lose;
+        }
+      
+      result.classList.remove("loading")
+      option.classList.remove("selected");
+      isProcessing = false;
     }, 2500);
 }
