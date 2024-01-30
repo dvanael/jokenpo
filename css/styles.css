@@ -38,7 +38,7 @@ section{
   cursor: pointer;
   transition: opacity 0.3s ease;
 }
-.option-img:hover{
+.option-img:hover, .selected{
   opacity: 1;
 }
 .option-img img{
@@ -47,7 +47,19 @@ section{
 .option-img p{
   text-align: center;
 }
-
+.loading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 0px;
+  content: "\2026";
+  animation: ellipsis steps(4,end) 900ms infinite;
+}
+@keyframes ellipsis {
+  to {
+    width: 0.8em;
+  }
+}
 .game.start .user-result {
   transform-origin: left;
   animation: userShake 0.7s ease infinite;
@@ -57,7 +69,6 @@ section{
     transform: rotate(10deg);
   }
 }
-
 .game.start .bot-result {
   transform-origin: right;
   animation: cpuShake 0.7s ease infinite;
