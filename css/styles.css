@@ -47,6 +47,26 @@ section{
 .option-img p{
   text-align: center;
 }
+
+.game.start .user-result {
+  transform-origin: left;
+  animation: userShake 0.7s ease infinite;
+}
+@keyframes userShake {
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+.game.start .bot-result {
+  transform-origin: right;
+  animation: cpuShake 0.7s ease infinite;
+}
+@keyframes cpuShake {
+  50% {
+    transform: rotate(-10deg);
+  }
+}
 @media screen and (max-width:992px){
   .game{
     width: 100%;
