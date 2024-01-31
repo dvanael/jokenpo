@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock, Paper, Sicssors</title>
+  <title>Rock, Paper, Scissors</title>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <nav class="navbar bg-body-tertiary">
+  <nav class="navbar bg-body-tertiary sticky-top">
     <div class="container-fluid">
-      <span class="navbar-brand mx-auto mb-0 h1">PEDRA PAPEL TESOURA</span>
+      <span class="navbar-brand mx-auto mb-0 fs-2 fw-bold">PEDRA PAPEL TESOURA</span>
     </div>
   </nav>
 
   <section class="container-fluid">
     <div class="container">
       <div class="d-flex justify-content-center align-items-center">
-        <div class="game m-3 rounded-4 shadow bg-body-secondary">
+        <div class="game m-3 rounded-4 shadow ">
 
           <div class="result-field">
             <div class="result-imgs d-flex">
@@ -48,56 +48,38 @@
             </span>
           </div>
         </div>
-      
       </div>
-      <hr>
-      <div class="row" id="regras">
+      <hr class="w-50 mx-auto">
+
+      <div class="d-flex justify-content-center">
         <div class="col-md-6" >
-          <h1>
-            Regras</h1>
-          <p>
-          No Janken-pon, os jogadores devem simultaneamente esticar a mão, na qual cada um formou um símbolo 
-          (que significa pedra, papel ou tesoura). Então, os jogadores comparam os símbolos para decidir quem 
-          ganhou, da seguinte forma:</p>
-          <p>
-            <ul>
-              <li>
-                <b>Pedra</b> ganha da <b>tesoura</b> (quebrando-a).</li>
-              <li>
-                <b>Tesoura</b> ganha do <b>papel</b> (cortando-o).</li>
-              <li>
-                <b>Papel</b> ganha da <b>pedra</b> (embrulhando-a).</li></ul>
-          A pedra é simbolizada por um punho fechado; a tesoura, por dois dedos esticados; e o papel, pela mão aberta.
-          Caso dois jogadores façam o mesmo gesto, ocorre um empate, e geralmente se joga de novo até desempatar.</p>
+          <div class="mb-5">
+            <h1>Regras</h1>
+            <p>No Janken-pon, os jogadores devem simultaneamente esticar a mão, na qual cada um formou um símbolo (que significa pedra, papel ou tesoura). Então, os jogadores comparam os símbolos para decidir quem ganhou, da seguinte forma:</p>
+            <p><ul>
+                <li>
+                  <b>Pedra</b> ganha da <b>tesoura</b> (quebrando-a).</li>
+                <li>
+                  <b>Tesoura</b> ganha do <b>papel</b> (cortando-o).</li>
+                <li>
+                  <b>Papel</b> ganha da <b>pedra</b> (embrulhando-a).</li></ul>
+            A pedra é simbolizada por um punho fechado; a tesoura, por dois dedos esticados; e o papel, pela mão aberta. Caso dois jogadores façam o mesmo gesto, ocorre um empate, e geralmente se joga de novo até desempatar.</p>
+          </div>
+
+          <div class="mb-5">
+            <h1>História</h1>
+            <p>Conhecido no Brasil como <b>Pedra, Papel ou Tesoura</b>, é um jogo bem antigo que tem sua origem na China e se popularizou para o mundo todo.</p>
+            <p>No Japão, Pedra, papel, tesoura é chamado simplesmente de "Janken". Acredita-se que Janken baseia-se em dois jogos Ken mais antigos, "Suu Ken" e "San Sukumi Ken". Os jogos Ken começaram a aumentar em popularidade em meados do século XIX. Acredita-se que Janken foi inventado no fim do século XIX, julgando fontes textuais da época sobre jogos Ken.</p>
+            <p>O jogo é frequentemente empregado como método de seleção (como na escolha de equipes para a prática desportiva, por exemplo), assim como lançar moedas, jogar dados, entre outros. No entanto, diferentemente desses métodos que se baseiam exclusivamente em sorte, pedra-papel-tesoura pode ser jogado com um pouco de habilidade.Principalmente se o jogo se estender por vários turnos com o mesmo jogador, este pode reconhecer e explorar a lógica do comportamento do adversário (perceber e anteceder as jogadas do adversário).</p>
+          </div>
         </div>
-        <div class="col-md-6">
-          <h1>
-            História</h1>
-          <p>
-          Conhecido no Brasil como <b>Pedra, Papel ou Tesoura</b>, é um jogo bem antigo que tem sua origem na China e se 
-          popularizou para o mundo todo.</p>
-          <p>
-          No Japão, Pedra, papel, tesoura é chamado simplesmente de "Janken". Acredita-se que Janken baseia-se em 
-          dois jogos Ken mais antigos, "Suu Ken" e "San Sukumi Ken". Os jogos Ken começaram a aumentar em 
-          popularidade em meados do século XIX. Acredita-se que Janken foi inventado no fim do século XIX, julgando 
-          fontes textuais da época sobre jogos Ken.</p>
-          <p>
-          O jogo é frequentemente empregado como método de seleção (como na escolha de equipes para a prática desportiva,
-          por exemplo), assim como lançar moedas, jogar dados, entre outros. No entanto, diferentemente desses métodos
-          que se baseiam exclusivamente em sorte, pedra-papel-tesoura pode ser jogado com um pouco de habilidade.
-          Principalmente se o jogo se estender por vários turnos com o mesmo jogador, este pode reconhecer e explorar
-            a lógica do comportamento do adversário (perceber e anteceder as jogadas do adversário).</p>
-        </div>
-      </div>
     </div> 
   </section>
 
-  <footer class="navbar bg-body-secondary">
-    <div class="container-fluid">
-      <span class="mx-auto p-3">
+  <footer class="container-fluid d-flex py-4 bg-body-secondary">
+      <span class="mx-auto">
         Copyright © WebDesing INFO 2021, 2022
       </span>
-    </div>
   </footer>
 
   <script src="js/bootstrap.bundle.min.js"></script>
