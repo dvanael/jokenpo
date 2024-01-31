@@ -44,7 +44,7 @@ section{
 .option-img img{
   width: 4rem;
 }
-.option-img p{
+.option-imgg p{
   text-align: center;
 }
 .loading:after {
@@ -71,9 +71,9 @@ section{
 }
 .game.start .bot-result {
   transform-origin: right;
-  animation: cpuShake 0.7s ease infinite;
+  animation: botShake 0.7s ease infinite;
 }
-@keyframes cpuShake {
+@keyframes botShake {
   50% {
     transform: rotate(-10deg);
   }
