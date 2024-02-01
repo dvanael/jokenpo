@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-
+:root{
+  --nav-color: #dedede;
+  --bg-color: #acacac;
+  --content-color: #f2f2f2;
+}
 * {
   margin: 0;
   padding: 0;
@@ -11,15 +15,35 @@ body {
   flex-direction: column;
   height: 100vh;    
 }
+hr{
+  border-color: var(--bg-color) ;
+  border-width: 0.2rem;
+}
 section{
+  background-color: var(--bg-color);
   flex: 1 1 0;
 }
+footer{
+  background-color: var(--nav-color);
+}
+.navbar{
+  background-color: var(--nav-color)
+}
+.content{
+  margin-inline: 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.text-content{
+  font-size:0.8rem;
+}
 .game {
-  width: 50%;
+  background-color: var(--content-color);
+  width: 95%;
   padding: 1rem 5rem;
 }
 .result-imgs img{
-  width: 10rem;
+  width: 15rem;
 }
 .user-result img{
   transform: rotate(90deg);
@@ -29,7 +53,6 @@ section{
 }
 .result {
   text-align: center;
-  font-size: 2rem;
   margin-top: 0.5rem;
 }
 
@@ -77,22 +100,31 @@ section{
   50% {
     transform: rotate(-10deg);
   }
+
+}
+@media screen and (max-width:1350px){
+  .result-imgs img{
+    width: 13rem;
+  }
+}
+@media screen and (max-width:1200px){
+  .result-imgs img{
+    width: 10rem;
+  }
 }
 @media screen and (max-width:992px){
   .game{
     width: 100%;
   }
-}
-@media screen and (max-width:768px){
-  .result-imgs img{
-    width: 7rem;
+  .content{
+    flex-direction: column-reverse;
   }
 }
 @media screen and (max-width:576px){
-  .result{
-    font-size: 1rem;
-  }
   .result-imgs img{
-    width: 5rem;
+    width: 4.5rem;
+  }
+  .option-img img{
+    width: 3rem;
   }
 }
