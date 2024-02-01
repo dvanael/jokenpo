@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 :root{
-  --nav-color: #dedede;
-  --bg-color: #acacac;
-  --content-color: #f2f2f2;
+  --nav-color: #b4cff4;
+  --bg-color: #7a92a0;
+  --primary-color: #e2e8ed;
+  --secondary-color: #cad7e0;
 }
 * {
   margin: 0;
@@ -34,11 +35,14 @@ footer{
   display: flex;
   flex-wrap: wrap;
 }
+.content-box{
+  background-color: var(--secondary-color);
+}
 .text-content{
   font-size:0.8rem;
 }
 .game {
-  background-color: var(--content-color);
+  background-color: var(--primary-color);
   width: 95%;
   padding: 1rem 5rem;
 }
