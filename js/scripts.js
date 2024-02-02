@@ -4,9 +4,9 @@ const gameContainer = document.querySelector(".game"),
   result = document.querySelector(".result"),
   optionImgs = document.querySelectorAll(".option-img");
 
-const R = "assets/rock.png", 
-  P = "assets/paper.png", 
-  S = "assets/scissors.png";
+const R = "img/rock.png", 
+  P = "img/paper.png", 
+  S = "img/scissors.png";
 
 const draw = "Empate", win = "Você Ganhou!", lose = "Você Perdeu!";
 
@@ -48,3 +48,11 @@ function play(user, option){
       isProcessing = false;
     }, 2500);
 }
+
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
+
+darkModeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  darkModeToggle.src = "img/light.png"
+});
