@@ -46,7 +46,7 @@ function play(user, option){
       result.classList.remove("loading")
       option.classList.remove("selected");
       isProcessing = false;
-    }, 2500);
+    }, 2000);
 }
 
 const themeButton = document.querySelector('.theme-btn'),
@@ -58,11 +58,11 @@ themeButton.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
 
   if (body.classList.contains('dark-mode')) {
-    themeButton.style.opacity = 0; // Reduz a opacidade antes de mudar a imagem
+    themeButton.style.opacity = 0; 
     setTimeout(() => {
-      themeButton.src = lightMode; // Muda a imagem
-      themeButton.style.opacity = 1; // Aumenta a opacidade após a mudança
-    }, 200); // Aguarda 300ms antes de mudar a imagem para coincidir com a duração da transição definida em CSS
+      themeButton.src = lightMode; 
+      themeButton.style.opacity = 1; 
+    }, 200); 
   } else {
     themeButton.style.opacity = 0;
     setTimeout(() => {

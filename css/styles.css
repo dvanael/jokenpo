@@ -11,7 +11,7 @@
   --secondary-color: #394048;
   --terciary-color: #24262a;
   img {
-    filter: invert(90%); /* Inverte e define uma cor */
+    filter: invert(90%);
   }
   .result-imgs img{
     filter: invert(90%) drop-shadow(3px 3px 0 var(--primary-color));
@@ -46,6 +46,9 @@ footer{
 }
 .navbar{
   background-color: var(--secondary-color)
+}
+.title-img{
+  width: 9rem;
 }
 .content{
   margin-inline: 5%;
@@ -89,9 +92,6 @@ footer{
 }
 .option-img img{
   width: 4rem;
-}
-.option-imgg p{
-  text-align: center;
 }
 .loading:after {
   overflow: hidden;
