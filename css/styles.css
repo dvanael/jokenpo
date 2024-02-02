@@ -49,6 +49,7 @@ footer{
 }
 .content{
   margin-inline: 5%;
+  margin-block: 1.9%;
   display: flex;
   flex-wrap: wrap;
 }
