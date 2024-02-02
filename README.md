@@ -27,7 +27,7 @@ Atualmente, com uma noção melhor de como utilizar as tecnologias citadas anter
 
 **Animações** e **Dark Mode**, foram adicionados para complementar o projeto.
 
-Este foi o resultado final. Para testar, você pode acessá-lo em [**github.io/rock-paper-scissors**](https://dvanael.github.io/rock-paper-scissors/).
+Este foi o resultado final. Para testar, você pode acessá-lo em [**github.io/jokenpo**](https://dvanael.github.io/jokenpo/).
 
 **Projeto Atual**
 
