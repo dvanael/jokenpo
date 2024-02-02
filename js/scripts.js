@@ -49,10 +49,25 @@ function play(user, option){
     }, 2500);
 }
 
-const darkModeToggle = document.getElementById('dark-mode-toggle');
-const body = document.body;
-
-darkModeToggle.addEventListener('click', () => {
+const themeButton = document.querySelector('.theme-btn'),
+  body = document.body,
+  lightMode = "img/light.png",
+  darkMode = "img/dark.png"
+  
+themeButton.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
-  darkModeToggle.src = "img/light.png"
+
+  if (body.classList.contains('dark-mode')) {
+    themeButton.style.opacity = 0; // Reduz a opacidade antes de mudar a imagem
+    setTimeout(() => {
+      themeButton.src = lightMode; // Muda a imagem
+      themeButton.style.opacity = 1; // Aumenta a opacidade após a mudança
+    }, 200); // Aguarda 300ms antes de mudar a imagem para coincidir com a duração da transição definida em CSS
+  } else {
+    themeButton.style.opacity = 0;
+    setTimeout(() => {
+      themeButton.src = darkMode;
+      themeButton.style.opacity = 1;
+    }, 200);
+  }
 });
