@@ -1,9 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 :root{
-  --nav-color: #b4cff4;
-  --bg-color: #7a92a0;
-  --primary-color: #e2e8ed;
-  --secondary-color: #cad7e0;
+  --font-color: #333;
+  --primary-color: #0a81ea;
+  --secondary-color: #edeff2;
+  --terciary-color: #bdc7d3;
+}
+.dark-mode{
+  --font-color: #ddd;
+  --primary-color: #1d9efa;
+  --secondary-color: #394048;
+  --terciary-color: #24262a;
+  img {
+    filter: invert(90%); /* Inverte e define uma cor */
+  }
+  .result-imgs img{
+    filter: invert(90%) drop-shadow(3px 3px 0 var(--primary-color));
+  }
 }
 * {
   margin: 0;
@@ -11,24 +23,28 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+img {
+  filter: hue-rotate(180deg);
+}
 body {
+  color: var(--font-color);
   display: flex;
   flex-direction: column;
   height: 100vh;    
 }
 hr{
-  border-color: var(--bg-color) ;
+  border-color: var(--primary-color);
   border-width: 0.2rem;
 }
 section{
-  background-color: var(--bg-color);
+  background-color: var(--terciary-color);
   flex: 1 1 0;
 }
 footer{
-  background-color: var(--nav-color);
+  background-color: var(--secondary-color);
 }
 .navbar{
-  background-color: var(--nav-color)
+  background-color: var(--secondary-color)
 }
 .content{
   margin-inline: 5%;
@@ -42,12 +58,13 @@ footer{
   font-size:0.8rem;
 }
 .game {
-  background-color: var(--primary-color);
   width: 95%;
-  padding: 1rem 5rem;
+  padding-inline: 3%;
+  padding-block: 1.7%;
 }
 .result-imgs img{
   width: 15rem;
+  filter: drop-shadow(3px 3px 0 var(--primary-color));
 }
 .user-result img{
   transform: rotate(90deg);
@@ -56,10 +73,10 @@ footer{
   transform: rotate(-90deg) rotateY(180deg);
 }
 .result {
+  color: var(--primary-color);
   text-align: center;
   margin-top: 0.5rem;
 }
-
 .option-img{
   opacity: 0.5;
   cursor: pointer;
@@ -126,7 +143,7 @@ footer{
 }
 @media screen and (max-width:576px){
   .result-imgs img{
-    width: 4.5rem;
+    width: 6rem;
   }
   .option-img img{
     width: 3rem;
